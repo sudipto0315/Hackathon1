@@ -46,13 +46,37 @@
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="user"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">User LogIn</h5>
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">User Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
-                <div class="offcanvas-body">
-                    ...
-                    Make form here for user
+                <div class="offcanvas-body offcanvas-userform-body wrapper">
+                    <!-- <div class = "wrapper"> -->
+                        <form action="">
+                            <!-- <h1>Login</h1> -->
+                            <div class = "input_box">
+                                <input type="text" placeholder="Username or Email" required>
+                                <i class='bx bxs-user'></i>
+                            </div>
+                            <div class = "input_box">
+                                <input type="password" placeholder="Password" required>
+                                <i class='bx bxs-lock-alt' ></i>
+                            </div>
+                            <div class="remember">
+                                <label><input type="checkbox">Remember me</label>
+                                <a href="#">Forgot Password</a>
+                            </div>
+                            <button type = "submit" class = "btn">Login</button>
+                            <p class="or-divider">OR</p>
+                              <a href="#" class="btn-google">Sign in with Google</a>
+                            <div class = "register">
+                                <p>Don't have an account?
+                                    <a href="#">Register</a>
+                                </p>
+                            </div>
+                        </form>
+                    <!-- </div> -->
+                   
                 </div>
             </div>
 
