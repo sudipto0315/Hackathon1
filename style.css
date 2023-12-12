@@ -1,138 +1,226 @@
-.wrapper{
-    width: 420px;
-    background:white;
-    color: black;
-    border-radius: 10px;
-    padding: 60px 50px;
+/* Input Box Styles */
+.input_box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
 }
-.wrapper h1{
-    font-size: 36px;
-    text-align: center;
-    
-}
-.wrapper .input_box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin:30px 0;
-}
-.input_box input{
-    width: 100%;
-    height:100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    border: 2px solid black;
-    border-radius: 40px;
-    font-size: 18px;
-    color:rgb(92, 89, 89);
-    padding: 20px 45px 20px 20px;
- }
- .input_box input::placeholder{
-    color: rgb(153, 152, 152);
- }
- .input_box i{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-   transform: translateY(-50%);
-   font-size: 20px;
- }
- .wrapper .remember{
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px ;
-    margin: -15px 0px 15px
- }
- .remember label input{
-    accent-color: #fff;
-    margin-right: 5px;  
- }
- .remember a{
-    color: black;
-    text-decoration: none;
- }
- .remember a:hover{
-    text-decoration: underline;
-    color: blue;
 
- }
- .wrapper .btn
-{
-    width: 100%;
-    height:45px;
-    background: transparent;
-    border: none;
-    outline: none; 
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
+.input_box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid #007bff; /* Border color */
+  border-radius: 40px;
+  font-size: 18px;
+  color: #495057; /* Dark gray text color */
+  padding: 20px 45px 20px 20px;
 }
-.wrapper .register{
-    font-size: 15px;
-    text-align:center;
+
+.input_box input::placeholder {
+  color: #6c757d; /* Medium gray placeholder text color */
+}
+
+.input_box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+/* Remember Me Styles */
+.remember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  font-size: 15px;
+  margin: 15px 0;
+}
+
+.remember label {
+  margin-right: 5px; /* Adjust spacing between checkbox and text */
+}
+
+.remember label input {
+  accent-color: #fff;
+  margin-bottom: 0; /* Reset margin-bottom */
+}
+
+.remember a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.remember a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Divider Styles */
+.or-divider {
+  text-align: center;
+  margin: 15px 0;
+  position: relative;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: "";
+  display: inline-block;
+  width: 40%;
+  height: 1px;
+  background-color: #007bff;
+  position: absolute;
+  top: 50%;
+}
+
+.or-divider::before {
+  right: 5%;
+}
+
+.or-divider::after {
+  left: 5%;
+}
+
+/* Register Styles */
+.register {
+  text-align: center;
+}
+
+.register p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register p a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Remember and Forgot Password Container Styles */
+.remember-forgot-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center vertically */
+  font-size: 15px;
+  margin: 0;
+}
+
+.remember label input {
+  accent-color: #fff;
+  margin-bottom: 0; /* Reset margin-bottom */
+}
+
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Offcanvas Body Styles */
+.offcanvas-body {
+  padding: 20px;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+/* Button Hover Effect */
+.btn:hover {
+  background: #357ae8;
+}
+
+/* Button Styles */
+.btn,
+.btn-google {
+  width: 100%;
+  height: 45px;
+  background: #4285f4;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(66, 133, 244, 0.5);
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+/* Google Button Hover Effect */
+.btn-google:hover {
+  background: #357ae8;
+}
+
+/* Input Focus Styles */
+.input_box input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Add box shadow on focus */
+}
+
+.input_box input:focus::placeholder {
+  color: #cbcbcb; /* Adjust the desired color */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #007bff !important;
+}
+
+.nav-link,
+.navbar-brand {
+  color: #ffffff !important;
+}
+
+.nav-link:hover {
+  color: #0056b3 !important;
+}
+
+/* Navbar Scroll Effect */
+.navbar-scrolled {
+  background-color: #0056b3 !important;
+}
+
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-brand {
+  color: #ffffff !important;
+}
+
+/* Wrapper Styles */
+.wrapper {
+  position: relative;
+  width: 420px;
+  background: #f8f9fa; /* Light gray background color */
+  color: #212529; /* Dark text color */
+  border-radius: 10px;
+  padding: 60px 50px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft box shadow for depth */
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    overflow: auto; /* Add overflow property to make the form scrollable */
+  }
+
+  .input_box {
+    margin-bottom: 20px;
+  }
+
+  .remember-forgot-container,
+  .btn-google {
     margin-top: 15px;
-
+  }
 }
-.register p a{
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-}
-.register p a:hover{
-    text-decoration: underline;
-    color: blue;
-}
-.wrapper .btn-google {
-    width: 100%;
-    height: 45px;
-    background: #4285F4;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #ffffff;
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.wrapper .btn-google:hover {
-    background: #357ae8;
-}
-.wrapper .or-divider {
-    text-align: center;
-    margin: 15px 0;
-    position: relative;
-    font-size: 12px;
-    font-style: italic;
-    
-}
-
-.wrapper .or-divider::before,
-.wrapper .or-divider::after {
-    content: "";
-    display: inline-block;
-    width: 40%;
-    height: 1px;
-    background-color: black; 
-    position: absolute;
-    top: 50%;
-}
-
-.wrapper .or-divider::before {
-    right: 5%;
-}
-
-.wrapper .or-divider::after {
-    left: 5%;
-}
-
