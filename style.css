@@ -1,3 +1,5 @@
+/* Body */
+
 /* Input Box Styles */
 .input_box {
   position: relative;
@@ -32,14 +34,6 @@
 }
 
 /* Remember Me Styles */
-.remember {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Center vertically */
-  font-size: 15px;
-  margin: 15px 0;
-}
-
 .remember label {
   margin-right: 5px; /* Adjust spacing between checkbox and text */
 }
@@ -176,7 +170,12 @@
 .navbar {
   /* background-color: #007bff !important; */
   background-color: orangered !important;
-  background-image: linear-gradient(to right,orangered,rgb(255, 255, 0),orangered) !important;
+  background-image: linear-gradient(
+    to right,
+    orangered,
+    rgb(255, 255, 0),
+    orangered
+  ) !important;
 }
 
 .nav-link,
@@ -188,28 +187,16 @@
   color: #0056b3 !important;
 }
 
-/* Navbar Scroll Effect */
-.navbar-scrolled {
-  /* background-color: #0056b3 !important; */
-
-}
-
-.navbar-scrolled .nav-link,
-.navbar-scrolled .navbar-brand {
-  color: #ffffff !important;
-}
-
 /* Wrapper Styles */
 .wrapper {
   position: relative;
   width: 420px;
-  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(255, 89, 0));
-  /* background-image: conic-gradient(blue,black, green, red, yellow); */
   color: #212529; /* Dark text color */
   border-radius: 10px;
-  padding: 60px 50px;
+  padding: 30px 50px;
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft box shadow for depth */
+  overflow: auto; /* Add overflow property to make the form scrollable */
 }
 
 /* Media Query for Smaller Screens */
@@ -227,4 +214,55 @@
   .btn-google {
     margin-top: 15px;
   }
+}
+
+/* Logo Styles */
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px; /* Adjust the width as needed */
+  height: 150px; /* Adjust the height as needed */
+  background-color: #ffffff; /* Background color for the logo */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Forgot Password Form Styles */
+.forgot-password-form {
+  display: none;
+}
+
+.forgot-password-form #go-back-link-login,
+.otp-form #go-back-link-getotp-user,
+.otp-form #go-back-link-getotp-server {
+  display: flex;
+  align-items: center;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 16px;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.forgot-password-form #go-back-link-login i,
+.otp-form #go-back-link-getotp-user i,
+.otp-form #go-back-link-getotp-server i {
+  font-size: 20px;
+}
+
+.forgot-password-form .input_box,
+.otp-form .input_box-user,
+.otp-form .input_box-server {
+  margin: 20px 0; /* Adjust margin as needed */
+}
+
+.forgot-password-form .btn,
+.otp-form .btn-user,
+.otp-form .btn-server {
+  margin-top: 20px; /* Adjust margin as needed */
 }

@@ -53,9 +53,9 @@
 
                 <div class="offcanvas-body offcanvas-userform-body wrapper">
                     <!-- Logo -->
-                    <img class="logo" src="path/to/your/logo.png" alt="Logo">
+                    <img class="logo" src="Src/logo/com_logo.png" alt="Logo">
 
-                    <form action="">
+                    <form action="Client/home.html">
                         <!-- Form Content -->
                         <div class="input_box">
                             <input type="text" placeholder="Username or Email" required>
@@ -69,8 +69,9 @@
                             <div class="remember">
                                 <label><input type="checkbox"> Remember me</label>
                             </div>
+                            <!-- Link to open Forgot Password Form -->
                             <div class="forgot-password">
-                                <a href="#">Forgot Password</a>
+                                <a href="#" id="forgot-password-link">Forgot Password</a>
                             </div>
                         </div>
 
@@ -81,6 +82,47 @@
                             <p>Don't have an account? <a href="#">Register</a></p>
                         </div>
                     </form>
+
+                    <!-- Forgot Password Form (Initially hidden) -->
+                    <form class="forgot-password-form">
+                        <!-- Form Content for Forgot Password -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Email or Phone Number" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="get-otp-button">Get OTP</button>
+                        <div class="btn-back">
+                            <a href="#" id="go-back-link-login"><i class='bx bx-arrow-back'></i>Go Back</a>
+                        </div>
+                    </form>
+
+                    <!-- OTP Form (Initially hidden) -->
+                    <form class="otp-form" style="display: none;">
+                        <!-- Form Content for OTP -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Enter OTP" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="verify-otp-button">Verify OTP</button>
+                        <div class="btn-back">
+                            <a href="#" id="go-back-link-getotp"><i class='bx bx-arrow-back'></i>Go Back</a>
+                        </div>
+                    </form>
+
+                    <!-- New Password Form (Initially hidden) -->
+                    <form class="new-password-form" style="display: none;">
+                        <!-- Form Content for New Password -->
+                        <div class="input_box">
+                            <input type="password" placeholder="Enter New Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Re-enter New Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="confirm-new-password-button">Confirm</button>
+                        <div class="btn-back">
+                            <a href="#" id="go-back-link-newpassword"><i class='bx bx-arrow-back'></i>Go Back</a>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -89,14 +131,15 @@
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasRightLabel">Server Login</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close-server btn-close" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
                 </div>
 
-                <div class="offcanvas-body wrapper">
+                <div class="offcanvas-body offcanvas-serverform-body wrapper">
                     <!-- Logo -->
-                    <img class="logo" src="path/to/your/logo.png" alt="Logo">
+                    <img class="logo" src="Src/logo/com_logo.png" alt="Logo">
 
-                    <form action="">
+                    <form action="Admin/Dashboard/index.html">
                         <!-- Form Content -->
                         <div class="input_box">
                             <input type="text" placeholder="Username or Email" required>
@@ -110,9 +153,13 @@
                             <input type="password" placeholder="Password" required>
                             <i class='bx bxs-lock-alt'></i>
                         </div>
-                        <div class="remember">
-                            <label><input type="checkbox">Remember me</label>
-                            <a href="#">Forgot Password</a>
+                        <div class="remember-forgot-container">
+                            <div class="remember">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="#" id="forgot-password-link-server">Forgot Password</a>
+                            </div>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Login</button>
@@ -122,9 +169,49 @@
                             <p>Don't have an account? <a href="#">Register</a></p>
                         </div>
                     </form>
+
+                    <!-- Forgot Password Form (Initially hidden) -->
+                    <form class="forgot-password-form-server">
+                        <!-- Form Content for Forgot Password -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Email or Phone Number" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="get-otp-button-server">Get OTP</button>
+                        <div class="btn-back-server">
+                            <a href="#" id="go-back-link-login-server"><i class='bx bx-arrow-back'></i>Go Back</a>
+                        </div>
+                    </form>
+
+                    <!-- OTP Form (Initially hidden) -->
+                    <form class="otp-form-server" style="display: none;">
+                        <!-- Form Content for OTP -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Enter OTP" required>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="verify-otp-button-server">Verify OTP</button>
+                        <div class="btn-back-server">
+                            <a href="#" id="go-back-link-getotp-server"><i class='bx bx-arrow-back'></i>Go Back</a>
+                        </div>
+                    </form>
+
+                    <!-- New Password Form (Initially hidden) -->
+                    <form class="new-password-form-server" style="display: none;">
+                        <!-- Form Content for New Password -->
+                        <div class="input_box">
+                            <input type="password" placeholder="Enter New Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Re-enter New Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="confirm-new-password-button-server">Confirm</button>
+                        <div class="btn-back-server">
+                            <a href="#" id="go-back-link-newpassword-server"><i class='bx bx-arrow-back'></i>Go Back</a>
+                        </div>
+                    </form>
                 </div>
             </div>
-
 
             <div class="home-content container text-center">
                 <!-- Only for demo.. -->
@@ -210,7 +297,8 @@
         crossorigin="anonymous"></script>
 
     <!-- Custom JS -->
-    <script src="app.js"></script>
+    <script src="user_app.js"></script>
+    <script src="server_app.js"></script>
 </body>
 
 </html>
