@@ -174,7 +174,9 @@
 
 /* Navbar Styles */
 .navbar {
-  background-color: #007bff !important;
+  /* background-color: #007bff !important; */
+  background-color: orangered !important;
+  background-image: linear-gradient(to right,orangered,rgb(255, 255, 0),orangered) !important;
 }
 
 .nav-link,
@@ -188,7 +190,8 @@
 
 /* Navbar Scroll Effect */
 .navbar-scrolled {
-  background-color: #0056b3 !important;
+  /* background-color: #0056b3 !important; */
+
 }
 
 .navbar-scrolled .nav-link,
@@ -200,7 +203,8 @@
 .wrapper {
   position: relative;
   width: 420px;
-  background: #f8f9fa; /* Light gray background color */
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(255, 89, 0));
+  /* background-image: conic-gradient(blue,black, green, red, yellow); */
   color: #212529; /* Dark text color */
   border-radius: 10px;
   padding: 60px 50px;
