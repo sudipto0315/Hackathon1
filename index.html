@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hackathon1</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -46,13 +47,40 @@
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="user"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">User LogIn</h5>
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">User Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
-                <div class="offcanvas-body">
-                    ...
-                    Make form here for user
+                <div class="offcanvas-body offcanvas-userform-body wrapper">
+                    <!-- Logo -->
+                    <img class="logo" src="path/to/your/logo.png" alt="Logo">
+
+                    <form action="">
+                        <!-- Form Content -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Username or Email" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <div class="remember-forgot-container">
+                            <div class="remember">
+                                <label><input type="checkbox"> Remember me</label>
+                            </div>
+                            <div class="forgot-password">
+                                <a href="#">Forgot Password</a>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <p class="or-divider">OR</p>
+                        <a href="#" class="btn-google btn btn-primary">Sign in with Google</a>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#">Register</a></p>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -60,15 +88,43 @@
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="server"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title " id="offcanvasRightLabel">Server LogIn</h5>
+                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Server Login</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
 
-                <div class="offcanvas-body">
-                    ...
-                    Make form here for server
+                <div class="offcanvas-body wrapper">
+                    <!-- Logo -->
+                    <img class="logo" src="path/to/your/logo.png" alt="Logo">
+
+                    <form action="">
+                        <!-- Form Content -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Username or Email" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="text" placeholder="Employee Id" required>
+                            <i class='bx bxs-key'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="password" placeholder="Password" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+                        <div class="remember">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot Password</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <p class="or-divider">OR</p>
+                        <a href="#" class="btn-google btn btn-primary">Sign in with Google</a>
+                        <div class="register">
+                            <p>Don't have an account? <a href="#">Register</a></p>
+                        </div>
+                    </form>
                 </div>
             </div>
+
 
             <div class="home-content container text-center">
                 <!-- Only for demo.. -->
@@ -135,7 +191,7 @@
                 </div>
 
                 <Button type="button" class="btn btn-primary btn-lg" data-bs-toggle="offcanvas" data-bs-target="#user"
-                aria-controls="offcanvasRight">LogIn</Button>
+                    aria-controls="offcanvasRight">LogIn</Button>
             </div>
         </div>
 
@@ -155,7 +211,6 @@
 
     <!-- Custom JS -->
     <script src="app.js"></script>
-
 </body>
 
 </html>
