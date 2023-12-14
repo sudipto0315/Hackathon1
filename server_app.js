@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const newPasswordForm = document.querySelector(".new-password-form-server"); // Add reference to the new password form
     
     // Get references to the close button, links, and the "Get OTP" button
-    const buttonClose = document.querySelector(".btn-close");
+    const buttonClose = document.querySelector(".btn-close-server");
     const forgotPasswordLink = document.getElementById("forgot-password-link-server");
     const goBackLinkForm = document.getElementById("go-back-link-login-server");
     const goBackLinkGetOtp = document.getElementById("go-back-link-getotp-server");
