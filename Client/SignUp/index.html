@@ -8,79 +8,100 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+    <div class="first-page">
+        <div class="mt-5">
+            <h2 class="text-center mb-4">Registration Form</h2>
+            <!-- Registration Form -->
+            <form>
+                <!-- Name -->
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required
+                        placeholder="Enter your name">
+                </div>
 
-    <div class="container mt-5">
-        <h2 class="text-center mb-4">Registration Form</h2>
-        <!-- Registration Form -->
-        <form>
-            <!-- Name -->
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
+                <!-- Gender -->
+                <div class="mb-3">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select class="form-select" id="gender" name="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
-            <!-- Gender -->
-            <div class="mb-3">
-                <label for="gender" class="form-label">Gender</label>
-                <select class="form-select" id="gender" name="gender" required>
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
+                <!-- Email Address -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required
+                        placeholder="Enter your email">
+                </div>
 
-            <!-- Email Address -->
-            <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
+                <!-- Phone Number -->
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required
+                        placeholder="Enter your phone number">
+                </div>
 
-            <!-- Phone Number -->
-            <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
-            </div>
+                <!-- Address Details -->
+                <!-- Country Dropdown with Search -->
+                <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <select class="form-select country" id="country" name="country" onchange="loadStates()" required>
+                        <option value="">Select Country</option>
+                    </select>
+                </div>
 
-            <!-- Address Details -->
-            <!-- Country Dropdown with Search -->
-            <div class="mb-3">
-                <label for="country" class="form-label">Country</label>
-                <select class="form-select country" id="country" name="country" onchange="loadStates()" required>
-                    <option value="">Select Country</option>
-                </select>
-            </div>
+                <!-- State Dropdown -->
+                <div class="mb-3">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select state" id="state" name="state" onchange="loadCities()" required>
+                        <option value="">Select State</option>
+                    </select>
+                </div>
 
-            <!-- State Dropdown -->
-            <div class="mb-3">
-                <label for="state" class="form-label">State</label>
-                <select class="form-select state" id="state" name="state" onchange="loadCities()" required>
-                    <option value="">Select State</option>
-                </select>
-            </div>
+                <!-- City/State/Province Dropdown -->
+                <div class="mb-3">
+                    <label for="city" class="form-label">City/State/Province</label>
+                    <select class="form-select city" id="city" name="city" onchange="loadLocations()" required>
+                        <option value="">Select City/State/Province</option>
+                    </select>
+                </div>
 
-            <!-- City/State/Province Dropdown -->
-            <div class="mb-3">
-                <label for="city" class="form-label">City/State/Province</label>
-                <select class="form-select city" id="city" name="city" onchange="loadLocations()" required>
-                    <option value="">Select City/State/Province</option>
-                </select>
-            </div>
+                <!-- Pin Code -->
+                <div class="mb-3">
+                    <label for="pincode" class="form-label">Pin Code</label>
+                    <input type="text" class="form-control" id="pincode" name="pincode" required
+                        placeholder="Enter your pin code">
+                </div>
+                <!-- Terms and Conditions Checkbox -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="termsCheck" required>
+                    <label class="form-check-label" for="termsCheck">I agree to the <a href="#" target="_blank">Terms
+                            and Conditions</a></label>
+                </div>
 
-            <!-- Pin Code -->
-            <div class="mb-3">
-                <label for="pincode" class="form-label">Pin Code</label>
-                <input type="text" class="form-control" id="pincode" name="pincode" required>
-            </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Register</button>
 
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">Register</button>
-        </form>
+                <!-- Already have an account? Login link -->
+                <p class="mt-3">Already have an account? <a href="../../index.html">Login here</a></p>
+            </form>
+        </div>
     </div>
 
     <!-- Bootstrap JS (Optional if you need it for other components) -->
