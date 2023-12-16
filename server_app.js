@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const confirmPass = document.getElementById("confirm-new-password-button-server");
     const registerLink = document.getElementById("register-link-server"); // Link to open the registration form
     const loginServer = document.getElementById("go-to-login");
+   
 
     // Event listener for the "Forgot Password" link
     forgotPasswordLink.addEventListener("click", (event) => {
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         newPasswordForm.style.display = "none";
         otpForm.style.display = "none";
     });
+  
 
     // Event listener for the "Get OTP" button
     getOtpButton.addEventListener("click", (event) => {
