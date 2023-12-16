@@ -1,26 +1,184 @@
-/* Google Font Link */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
 
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-form input {
+  margin-right: 5px;
+  margin-left: 10%;
+}
+
+.notification-bell,
+.inbox-icon {
+  position: relative;
+  margin-right: 10px;
+  /* Adjust the margin as needed */
+}
+
+.notification-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.notification-dropdown {
+  position: relative;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  width: 300px; /* Adjust the width as needed */
+  max-height: 300px; /* Set a maximum height */
+  /* overflow-y: auto; Add a scrollbar when content overflows */
+}
+
+.notification-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.view-all {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f8f9fa; /* Alternate color */
+}
+
+.view-all:hover {
+  background-color: #e2e6ea; /* Hover color */
+}
+
+/* Add this CSS to your style.css file or within a <style> tag in your HTML */
+
+.notification-dropdown .dropdown-item:nth-child(odd) {
+  background-color: #f8f9fa; /* Alternate background color for odd notifications */
+}
+
+.notification-dropdown .dropdown-item:nth-child(even) {
+  background-color: #ffffff; /* Alternate background color for even notifications */
+}
+
+.notification-dropdown .dropdown-item .text-success {
+  color: green; /* Color for the 'text-success' class (green) */
+}
+
+.notification-dropdown .dropdown-item .text-primary {
+  color: rgb(123, 0, 255); /* Color for the 'text-danger' class (red) */
+}
+
+.noti-time {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Add this to your style.css or in a style tag in your HTML */
+.toast-container {
+  max-width: 300px;
+  background-color: #fff; /* Change the background color */
+  border-radius: 10px;
+}
+
+.toast-header {
+  background-color: #007bff; /* Change the header background color */
+  color: #fff;
+}
+
+.toast-body {
+  padding: 10px;
+  overflow-y: auto; /* Add this to make it scrollable along the y-axis */
+}
+
+.all-msg {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto; /* Add this to make it scrollable along the y-axis */
+  max-height: 200px; /* Adjust the max-height as needed */
+}
+
+.not-my-msg {
+  background-color: #e2e2e2; /* Change the background color for received messages */
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 5px;
+}
+
+.my-msg {
+  background-color: #007bff; /* Change the background color for sent messages */
+  border-radius: 10px;
+  color: #fff;
+  padding: 8px;
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+form {
+  margin-top: 10px;
+  display: flex;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+button.btn-primary {
+  background-color: #007bff; /* Change the button color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/* General Styles */
+body {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.main {
-  background-color: #000000;
-}
-
+/* Sidebar Styles */
 .sidebar {
-  position: fixed;
+  position: relative;
   left: 0;
-  right: 0;
-  height: 100%;
-  width: 8px;
+  top: 0;
+  bottom: 0;
+  width: 78px;
   background: #11101d;
-  padding: 6px 14px;
+  padding: 14px 6px;
   z-index: 99;
+  overflow-y: auto;
+  max-height: 100vh;
+  transition: all 0.5s ease;
 }
 
 .sidebar.open {
@@ -36,15 +194,8 @@
   text-align: center;
 }
 
-.sidebar .logo-details .icon {
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-
+.sidebar .logo-details .icon,
 .sidebar .logo-details .logo_name {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
   opacity: 0;
   transition: all 0.5s ease;
 }
@@ -59,10 +210,7 @@
   top: 50%;
   right: 0;
   transform: translateY(-50%);
-  font-size: 22px;
-  transition: all 0.4s ease;
   font-size: 23px;
-  text-align: center;
   cursor: pointer;
   transition: all 0.5s ease;
 }
@@ -82,8 +230,6 @@
 
 .sidebar .nav-list {
   margin-top: 20px;
-  height: 100%;
-  direction: ltr;
 }
 
 .sidebar li {
@@ -128,7 +274,6 @@
   outline: none;
   height: 50px;
   width: 100%;
-  width: 50px;
   border: none;
   border-radius: 12px;
   transition: all 0.5s ease;
@@ -246,7 +391,7 @@
 }
 
 .sidebar .profile #log_out {
-  position: absolute;
+  position: relative;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
@@ -263,33 +408,32 @@
   background: none;
 }
 
+/* Main Content Styles */
 .home-section {
   position: relative;
   background: #e4e9f7;
   min-height: 100vh;
-  top: 0;
-  left: 78px;
-  width: calc(100% - 78px);
+  margin-left: 78px;
   transition: all 0.5s ease;
   z-index: 2;
 }
 
 .sidebar.open ~ .home-section {
-  left: 250px;
-  width: calc(100% - 250px);
-  position: fixed;
+  margin-left: 250px;
+  position: absolute; /* or fixed */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.home-section .text {
-  display: inline-block;
-  color: #11101d;
-  font-size: 25px;
-  font-weight: 500;
-  margin: 18px;
+.sidebar {
+    height: auto;
+    /* justify-content: center; */
 }
 
-@media (max-width: 420px) {
-  .sidebar li .tooltip {
-    display: none;
-  }
+.main-page {
+    display: flex;
+
 }
+

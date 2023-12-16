@@ -1,28 +1,167 @@
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>HackThon-1</title>
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- Bootstrap CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div class="main">
-        <div class="sidebar open">
-            <div class="logo-details">
-                <div class="logo_name">HackThon-1</div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">HackThon-1</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container-fluid collapse navbar-collapse justify-content-end" id="navbarScroll">
+                <div class="inbox-icon">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle position-relative" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end notification-dropdown">
+
+                                <a class="dropdown-item" href="#" id="liveToastBtn">
+                                    <div class="noti-time">
+                                        <span class="text-success">
+                                            <strong>Kashish &hearts;</strong>
+                                        </span>
+                                        <span class="small float-right text-muted mr-2">11:21 AM</span>
+                                    </div>
+
+                                    <div class="dropdown-message small text-truncate">
+                                        1 new message
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="noti-time">
+                                        <span class="text-primary">
+                                            <strong>Harsh</strong>
+                                        </span>
+                                        <span class="small float-right text-muted d-flex-reverse mr-2">11:21
+                                            AM</span>
+                                    </div>
+
+                                    <div class="dropdown-message small text-truncate">
+                                        2 new message
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="noti-time">
+                                        <span class="text-success">
+                                            <strong>HackThon-1</strong>
+                                        </span>
+                                        <span class="small float-right text-muted mr-2">09:11 AM</span>
+                                    </div>
+                                    <div class="dropdown-message small text-truncate">
+                                        Everything going well ??
+                                    </div>
+                                </a>
+
+                                <div class="view-all">View All Notifications</div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="notification-bell">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle position-relative" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bell"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-end notification-dropdown">
+                                <a class="dropdown-item" href="#">
+                                    <div class="noti-time">
+                                        <span class="text-success">
+                                            <strong>Complain-1</strong>
+                                        </span>
+                                        <span class="small float-right text-muted mr-2">11:21 AM</span>
+                                    </div>
+
+                                    <div class="dropdown-message small text-truncate">
+                                        This is an automated server response message. All systems are online.
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="noti-time">
+                                        <span class="text-primary">
+                                            <strong>Alert</strong>
+                                        </span>
+                                        <span class="small float-right text-muted d-flex-reverse mr-2">11:21
+                                            AM</span>
+                                    </div>
+
+                                    <div class="dropdown-message small text-truncate">
+                                        This is an automated server response message. All systems are online.
+                                    </div>
+                                </a>
+
+                                <a class="dropdown-item" href="#">
+                                    <div class="noti-time">
+                                        <span class="text-success">
+                                            <strong>Update</strong>
+                                        </span>
+                                        <span class="small float-right text-muted mr-2">11:21 AM</span>
+                                    </div>
+                                    <div class="dropdown-message small text-truncate">
+                                        This is an automated server response message. All systems are online.
+                                    </div>
+                                </a>
+
+                                <div class="view-all" onclick="showAllNotifications()">View All Notifications</div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="search-form">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <!-- Profile -->
+                <div class="profile-dropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img class="profile-pic" src="../Src/Img/avatar_1667831398.png" alt="Profile">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Edit Profile <i class="fas fa-pen-square"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">LogOut <i class="fas fa-sign-out-alt"></i></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
+        </div>
+    </nav>
+
+    <div class="main-page">
+        <!-- SideBars -->
+        <div class="sidebar open d-flex">
             <ul class="nav-list">
                 <li>
                     <a href="#">
@@ -80,23 +219,58 @@
                     </a>
                     <span class="tooltip">Setting</span>
                 </li>
-                <li class="profile">
-                    <div class="profile-details">
-                        <img src="profile.jpg" alt="profileImg">
-                        <div class="name_job">
-                            <div class="name">Prem Shahi</div>
-                            <div class="job">Web designer</div>
-                        </div>
-                    </div>
-                    <i class='bx bx-log-out' id="log_out"></i>
-                </li>
             </ul>
         </div>
-        <section class="home-section">
-            <div class="text">Dashboard</div>
-        </section>
+
+        <!-- SideBar Content -->
+        <div class="sidebar-content">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
+            </div>
+            
+        </div>
+
+        <!-- Toast -->
+        <div class="toast-container position-fixed top-50 start-50 translate-middle p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <img src="../Src/Img/avatar_1667831398.png" class="rounded me-2 small" alt="..." style="width: 30px; height: 30px;">
+                    <strong class="me-auto">Kashish &hearts;</strong>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    <div class="all-msg">
+                        <ul class="not-my-msg">
+                            Hey how are you
+                        </ul>
+                        <ul class="my-msg">
+                            i m fine
+                        </ul>
+                        <ul class="not-my-msg">
+                            how is harsh ?
+                        </ul>
+                    </div>
+                    <form action="">
+                        <input type="text" name="mymsg" id="mymsg" placeholder="write message">
+                        <button class="btn btn-primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
     </div>
 
+    <!-- Copyright symbol -->
+    <footer class="text-center mt-4">
+        <p>&copy; 2023 HackThon-1 All rights reserved.</p>
+    </footer>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-kJ3Wd/J1PViInIe5PnX1gyqKZQ0JSKnuM5ljCBKD6Pc=" crossorigin="anonymous"></script>
@@ -106,42 +280,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
-    <script>
-        let sidebar = document.querySelector(".sidebar");
-        let closeBtn = document.querySelector("#btn");
-        let searchBtn = document.querySelector(".bx-search");
 
-        // following are the code to change sidebar button(optional)
-        function menuBtnChange() {
-            if (sidebar.classList.contains("open")) {
-                closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-            } else {
-                closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");//replacing the iocns class
-            }
-        }
-
-        
-    </script>
-    <script>
-        // const sidebar = document.querySelector('.sidebar');
-        const homeSection = document.querySelector('.home-section');
-    
-        function toggleSidebar() {
-            const screenWidth = window.innerWidth;
-    
-            if (screenWidth <= 420) {
-                sidebar.classList.remove('open');
-            } else {
-                sidebar.classList.add('open');
-            }
-        }
-    
-        // Initial check on page load
-        toggleSidebar();
-    
-        // Add event listener for window resize
-        // window.addEventListener('resize', toggleSidebar);
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
