@@ -5,12 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const newPasswordForm = document.querySelector(".new-password-form");
   const registerForm = document.querySelector(".register-form");
   const registerNowLink = document.getElementById("go-to-register-user");
-
+    const serverLoginFormTitle = document.getElementById("offcanvasRightLabel");
   const buttonClose = document.querySelector(".btn-close");
   const forgotPasswordLink = document.getElementById("forgot-password-link");
   const goBackLinkForm = document.getElementById("go-back-link-login");
   const goBackLinkGetOtp = document.getElementById("go-back-link-getotp");
   const getOtpButton = document.getElementById("get-otp-button");
+  const userLoginFormTitle = document.getElementById("offcanvasRightLabel");
   const goBackLinkNewPassword = document.getElementById(
     "go-back-link-newpassword"
   );
@@ -25,6 +26,17 @@ document.addEventListener("DOMContentLoaded", () => {
     forgotPasswordForm.style.display = "none";
     newPasswordForm.style.display = "none";
     otpForm.style.display = "none";
+  });
+  registerNowLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    registerForm.style.display = "block";
+    loginForm.style.display = "none";
+    forgotPasswordForm.style.display = "none";
+    newPasswordForm.style.display = "none";
+    otpForm.style.display = "none";
+
+    // Change the title to "User Signup" when the "Register Now" link is clicked
+    userLoginFormTitle.textContent = "User Signup";
   });
 
   forgotPasswordLink.addEventListener("click", (event) => {
@@ -181,6 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((error) => console.error("Error loading cities:", error));
   }
+  
 
   // Initial load of countries
   window.onload = loadCountriesUser;
