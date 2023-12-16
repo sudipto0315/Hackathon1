@@ -1,4 +1,3 @@
-<br/>
 <p align="center">
   <h1>Hackathon1</h1>
   <p align="center">
