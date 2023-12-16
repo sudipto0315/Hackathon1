@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <h1 style="text-align: center;">Hackathon1</h1>
+  <h1>Hackathon1</h1>
   <p align="center">
     A collaborative project by the Hackathon1 Team!
     <br/>
