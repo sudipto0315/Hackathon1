@@ -1,11 +1,14 @@
 <br/>
 <p align="center">
-  <!-- <h1 align="center">Hackathon1</h1> -->
-  
-  <h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=3000&lines=Hackathon1;" />
-</h1>
-
+  <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+  <style>
+    .title{
+      text-align: center;
+      font-family: Righteous;
+      font-size: 35px;
+    }
+  </style>
+  <h1 class="title" style="color: #36BCF7;">Hackathon1</h1>
   <p align="center">
     A collaborative project by the Hackathon1 Team!
     <br/>
@@ -21,27 +24,27 @@
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/Pallav46/Hackathon1/total) ![Contributors](https://img.shields.io/github/contributors/Pallav46/Hackathon1?color=dark-green) ![Issues](https://img.shields.io/github/issues/Pallav46/Hackathon1) ![License](https://img.shields.io/github/license/Pallav46/Hackathon1) 
+![Downloads](https://img.shields.io/github/downloads/Pallav46/Hackathon1/total) ![Contributors](https://img.shields.io/github/contributors/Pallav46/Hackathon1?color=dark-green) ![Issues](https://img.shields.io/github/issues/Pallav46/Hackathon1) ![License](https://img.shields.io/github/license/Pallav46/Hackathon1)
 
 ## Table Of Contents
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+- [About the Project](#about-the-project)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Authors](#authors)
+- [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
 ![Screen Shot](images/screenshot.png)
 
-This project is a result of the collaborative efforts of the Hackathon1 Team. We have worked together to create a solution that addresses a specific problem and helps others. 
+This project is a result of the collaborative efforts of the Hackathon1 Team. We have worked together to create a solution that addresses a specific problem and helps others.
 
 ## Built With
 
@@ -73,7 +76,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Authors
 
-* **Contributor 1** - *Role* - [GitHub Profile](https://github.com/)
-* **Contributor 2** - *Role* - [GitHub Profile](https://github.com/)
-* **Contributor 3** - *Role* - [GitHub Profile](https://github.com/)
-* **Contributor 4** - *Role* - [GitHub Profile](https://github.com/)
+- **Contributor 1** - _Role_ - [GitHub Profile](https://github.com/)
+- **Contributor 2** - _Role_ - [GitHub Profile](https://github.com/)
+- **Contributor 3** - _Role_ - [GitHub Profile](https://github.com/)
+- **Contributor 4** - _Role_ - [GitHub Profile](https://github.com/)
