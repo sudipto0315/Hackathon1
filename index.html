@@ -79,7 +79,7 @@
                         <p class="or-divider">OR</p>
                         <a href="#" class="btn-google btn btn-primary">Sign in with Google</a>
                         <div class="register">
-                            <p>Don't have an account? <a href="Client/SignUp/index.html">Register Now</a></p>
+                            <p>Don't have an account? <a href="#" id="go-to-register-user">Register Now</a></p>
                         </div>
                     </form>
 
@@ -123,6 +123,56 @@
                             <a href="#" id="go-back-link-newpassword"><i class='bx bx-arrow-back'></i>Go Back</a>
                         </div>
                     </form>
+
+                    <!-- User register form -->
+                    <form class="register-form" style="display: none;">
+                        <!-- Form Content -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Enter your name" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="text" placeholder="Enter email Address" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="tel" placeholder="Enter phone number" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="input_box">
+                            <label for="country-user">Select Country:</label>
+                            <select class="form-select country-user" id="country-user" name="country-user"
+                                onchange="loadStatesUser()" required>
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+
+                        <!-- State -->
+                        <div class="input_box">
+                            <label for="state-user">Select State:</label>
+                            <select class="form-select state-user" id="state-user" name="state-user"
+                                onchange="loadCitiesUser()" required>
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+
+                        <!-- City -->
+                        <div class="input_box">
+                            <label for="city-user">Select City:</label>
+                            <select class="form-select city-user" id="city-user" name="city-user" required>
+                                <option value="">Select City/Province</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">SignUp</button>
+
+                        <div class="register">
+                            <p>Already have an account? <a id="go-to-login-user" href="#">LogIn</a></p>
+                        </div>
+                    </form>
+
                 </div>
             </div>
 
@@ -166,7 +216,7 @@
                         <p class="or-divider">OR</p>
                         <a href="#" class="btn-google btn btn-primary">Sign in with Google</a>
                         <div class="register">
-                            <p>Don't have an account? <a href="Admin/SignUp/index.html">Register</a></p>
+                            <p>Don't have an account? <a href="#" id="register-link-server">Register now</a>.</p>
                         </div>
                     </form>
 
@@ -211,6 +261,54 @@
                             <a href="#" id="go-back-link-newpassword-server"><i class='bx bx-arrow-back'></i>Go Back</a>
                         </div>
                     </form>
+
+                    <!-- Server register form -->
+                    <form class="register-form-server" style="display: none;" action="Admin/Dashboard/index.html">
+                        <!-- Form Content -->
+                        <div class="input_box">
+                            <input type="text" placeholder="Enter your name" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="text" placeholder="Enter email Address" required>
+                            <i class='bx bxs-user'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="tel" placeholder="Enter phone number" required>
+                            <i class='bx bxs-lock-alt'></i>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="input_box">
+                            <label for="country">Select Country:</label>
+                            <select class="form-select country" id="country" name="country" required>
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+
+                        <!-- State -->
+                        <div class="input_box">
+                            <label for="state">Select State:</label>
+                            <select class="form-select state" id="state" name="state" required>
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+
+                        <!-- City -->
+                        <div class="input_box">
+                            <label for="city">Select City:</label>
+                            <select class="form-select city" id="city" name="city" required>
+                                <option value="">Select City/Province</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">SignUp</button>
+
+                        <div class="register">
+                            <p>Already have an account? <a id="go-to-login" href="#">LogIn</a></p>
+                        </div>
+                    </form>
+
                 </div>
             </div>
 
