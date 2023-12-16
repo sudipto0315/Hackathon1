@@ -1,7 +1,6 @@
 <br/>
 <p align="center">
-  <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
-  <h1 style="text-align: center; font-family: Righteous; font-size: 35px; color: #36BCF7;">Hackathon1</h1>
+  <h1 style="text-align: center;">Hackathon1</h1>
   <p align="center">
     A collaborative project by the Hackathon1 Team!
     <br/>
