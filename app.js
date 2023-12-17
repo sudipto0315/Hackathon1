@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
       forms.newPasswordForm.style.display = "none";
       forms.registerForm.style.display = "none";
 
-      forms.LoginFormTitle.textContent = `LogIn`;
+      forms.LoginFormTitle.textContent = `${forms.type} LogIn`;
     });
 
     forms.verifyOtpButton.addEventListener("click", (event) => {
