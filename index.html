@@ -135,6 +135,7 @@
                             <input type="text" placeholder="Enter email Address" required>
                             <i class='bx bxs-user'></i>
                         </div>
+
                         <div class="input_box">
                             <input type="tel" placeholder="Enter phone number" required>
                             <i class='bx bxs-lock-alt'></i>
@@ -143,8 +144,7 @@
                         <!-- Country -->
                         <div class="input_box">
                             <label for="country-user">Select Country:</label>
-                            <select class="form-select country-user" id="country-user" name="country-user"
-                                onchange="loadStatesUser()" required>
+                            <select class="form-select country-user" id="country-user" name="country-user" required>
                                 <option value="">Select Country</option>
                             </select>
                         </div>
@@ -152,8 +152,7 @@
                         <!-- State -->
                         <div class="input_box">
                             <label for="state-user">Select State:</label>
-                            <select class="form-select state-user" id="state-user" name="state-user"
-                                onchange="loadCitiesUser()" required>
+                            <select class="form-select state-user" id="state-user" name="state-user" required>
                                 <option value="">Select State</option>
                             </select>
                         </div>
@@ -165,22 +164,33 @@
                                 <option value="">Select City/Province</option>
                             </select>
                         </div>
+                        <div class="input_pin">
+                            <label for="pincode">Pincode:</label>
+                            <input type="text" id="pincode" name="pincode" placeholder="Enter Pincode" required>
+                        </div>
 
                         <button type="submit" class="btn btn-primary">SignUp</button>
 
                         <div class="register">
                             <p>Already have an account? <a id="go-to-login-user" href="#">LogIn</a></p>
                         </div>
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="terms-checkbox" required>
+                            <label for="terms-checkbox">I agree to the <a href="#" target="_blank">Terms and
+                                    Conditions</a></label>
+                        </div>
+
                     </form>
 
                 </div>
             </div>
 
+
             <!-- Server LogInForm -->
             <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="server"
                 aria-labelledby="offcanvasRightLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Server Login</h5>
+                    <h5 class="offcanvas-title offcanvas-title-server" id="offcanvasRightLabel">Server Login</h5>
                     <button type="button" class="btn-close-server btn-close" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
@@ -271,11 +281,26 @@
                         </div>
                         <div class="input_box">
                             <input type="text" placeholder="Enter email Address" required>
-                            <i class='bx bxs-user'></i>
+                            <i class='bx bxs-envelope'></i>
+                        </div>
+                        <div class="input_box">
+                            <input type="text" placeholder="Employee Id" required>
+                            <i class='bx bxs-key'></i>
                         </div>
                         <div class="input_box">
                             <input type="tel" placeholder="Enter phone number" required>
-                            <i class='bx bxs-lock-alt'></i>
+                            <i class='bx bxs-phone'></i>
+                        </div>
+
+
+                        <div class="input_box">
+                            <label for="gender">Gender</label>
+                            <select class="form-select gender" id="gender" name="gender" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
 
                         <!-- Country -->
@@ -300,6 +325,11 @@
                             <select class="form-select city" id="city" name="city" required>
                                 <option value="">Select City/Province</option>
                             </select>
+                        </div>
+
+                        <div class="input_pin">
+                            <label for="pincode-server">Pincode:</label>
+                            <input type="text" id="pincode-server" name="pincode-server" placeholder="Enter Pincode" required>
                         </div>
 
                         <button type="submit" class="btn btn-primary">SignUp</button>
@@ -396,8 +426,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Custom JS -->
-    <script src="user_app.js"></script>
-    <script src="server_app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
